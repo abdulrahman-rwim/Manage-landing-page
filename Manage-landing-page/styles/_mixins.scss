@@ -1,0 +1,27 @@
+//media quries
+//in this size and bigger (min width)
+//640px 1200px
+$breakpoint-up: (
+  "medium": "40em",
+  "large": "53em",
+  "x-large": "75em",
+);
+//in this size and smaller (max width)
+//375px 640px 1200px
+$breakpoint-down: (
+  "small": "23em",
+  "medium": "40em",
+  "large": "53em",
+  "x-large": "75em",
+);
+//mixins
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoint-up, $size)) {
+    @content;
+  }
+}
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoint-down, $size)) {
+    @content;
+  }
+}

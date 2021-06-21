@@ -1,0 +1,90 @@
+.hero {
+  &__text {
+    padding-top: 4em;
+    @include breakpoint-up(x-large) {
+      width: 40%;
+      h1 {
+        font-size: 3rem;
+
+        line-height: 1.3;
+      }
+    }
+    p {
+      font-size: 1.1rem;
+    }
+
+    @include breakpoint-down(medium) {
+      text-align: center;
+    }
+
+    h1 {
+      @include breakpoint-up(large) {
+        font-size: 3rem;
+      }
+      font-size: 2.5rem;
+      color: $Dark-Blue;
+    }
+    p {
+      @include breakpoint-up(large) {
+        margin-bottom: 2.5em;
+      }
+      color: $Dark-Grayish-Blue;
+    }
+  }
+  &__image {
+    @include breakpoint-up(x-large) {
+      &::before {
+        content: "";
+        width: 130%;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: -200px;
+        left: -28%;
+        bottom: 0;
+
+        background: url("/images/bg-tablet-pattern.svg") no-repeat top right /
+          contain;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 31%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+        top: 25%;
+        left: 50%;
+        background: url("/images/illustration-intro.svg") no-repeat top /
+          contain;
+      }
+    }
+
+    @include breakpoint-down(medium) {
+      &::before {
+        content: "";
+        width: 120%;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: -90px;
+        right: -170px;
+        background: url("/images/bg-tablet-pattern.svg") no-repeat top right /
+          contain;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 90%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+        top: 15%;
+        background: url("/images/illustration-intro.svg") no-repeat top /
+          contain;
+      }
+    }
+  }
+}

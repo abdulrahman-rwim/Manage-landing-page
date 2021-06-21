@@ -1,0 +1,42 @@
+#menu {
+  display: none;
+}
+label {
+  display: block;
+  cursor: pointer;
+  padding: 0.5em;
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+  span {
+    display: block;
+    width: 35px;
+    height: 6px;
+    background: $Dark-Blue;
+    transition: 400ms;
+    transform-origin: 26.5%;
+  }
+}
+
+label > span:first-child {
+  transform: translateY(-5px);
+}
+label > span:last-child {
+  transform: translateY(5px);
+}
+#menu:checked ~ .nav__menu {
+  transform: scale(1.1);
+}
+#menu:checked ~ .nav__menu ~ .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+#menu:checked ~ label > span:nth-child(2n) {
+  width: 0;
+}
+#menu:checked ~ label > span:first-child {
+  transform: rotate(45deg);
+}
+#menu:checked ~ label > span:last-child {
+  transform: rotate(-45deg);
+}

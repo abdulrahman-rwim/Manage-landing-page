@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+  @include breakpoint-up(medium) {
+    align-items: center;
+  }
+
+  @include breakpoint-down(medium) {
+    height: 90vmin;
+  }
+
+  .logo {
+    width: 130px;
+    margin-top: 0.6em;
+  }
+}

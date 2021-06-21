@@ -1,0 +1,35 @@
+.testimonials {
+  text-align: center;
+
+  &__intro {
+    color: $Dark-Blue;
+    font-size: 1.7rem;
+    margin-bottom: 4em;
+  }
+  img {
+    width: 80px;
+
+    transform: translateY(-60px);
+  }
+  .testimonial {
+    flex: 1 0 300px;
+
+    background: $Vary-Light-Gray;
+    margin-bottom: 4em;
+    padding: 2em 2em 0 2em;
+    h3 {
+      color: $Dark-Blue;
+      font-size: 1.4rem;
+      transform: translateY(-30px);
+    }
+    p {
+      color: $Dark-Grayish-Blue;
+      transform: translateY(-30px);
+    }
+  }
+}
+.testimonial__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
